@@ -7,24 +7,13 @@
 
 import UIKit
 
-public class SplashPruebaViewController: UIViewController {
+class SplashPruebaViewController: UIViewController {
     var timerTest : Timer?
-    
-    public init(title: String){
-           print(title)
-           super.init(nibName: nil, bundle: nil)
-       }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
-    public override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("si al viewDidAppear")
         self.startTimer()
