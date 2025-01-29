@@ -8,6 +8,7 @@
 import UIKit
 
 public class SplashPruebaViewController: UIViewController {
+    var timerTest : Timer?
     
     public init(title: String){
            print(title)
@@ -25,11 +26,24 @@ public class SplashPruebaViewController: UIViewController {
         timer.invalidate()
     }
     
+    func startTimer () {
+      guard timerTest == nil else { return }
+        print("si al timer")
+      timerTest =  Timer.scheduledTimer(
+          timeInterval: TimeInterval(0.3),
+          target      : self,
+          selector    : #selector(SplashPruebaViewController.update),
+          userInfo    : nil,
+          repeats     : true)
+    }
+    
     // must be internal or public.
     @objc func update() {
-        print("si entre")
+        print("si al update")
         let vc = PruebitaViewController()
         self.present(vc, animated: true)
+        timerTest?.invalidate()
+        timerTest = nil
     }
 
 }
