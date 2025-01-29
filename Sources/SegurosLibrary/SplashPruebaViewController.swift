@@ -22,6 +22,7 @@ public class SplashPruebaViewController: UIViewController {
         super.viewDidLoad()
         print("si al viewdidload")
         let timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(SplashPruebaViewController.update), userInfo: nil, repeats: true)
+        timer.invalidate()
     }
     
     // must be internal or public.
