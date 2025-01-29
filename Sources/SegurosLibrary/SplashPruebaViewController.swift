@@ -34,7 +34,7 @@ public class SplashPruebaViewController: UIViewController {
       guard timerTest == nil else { return }
         print("si al timer")
       timerTest =  Timer.scheduledTimer(
-          timeInterval: TimeInterval(1),
+          timeInterval: TimeInterval(4),
           target      : self,
           selector    : #selector(SplashPruebaViewController.update),
           userInfo    : nil,
