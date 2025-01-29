@@ -9,6 +9,11 @@ import UIKit
 
 public class SplashPruebaViewController: UIViewController {
     
+    public init(title: String){
+           print(title)
+           super.init(nibName: nil, bundle: nil)
+       }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
