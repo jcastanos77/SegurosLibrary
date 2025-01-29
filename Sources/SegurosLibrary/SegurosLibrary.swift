@@ -7,8 +7,7 @@ import UIKit
 public class SegurosLibrary{
     public init(){}
     
-    @MainActor public func openViewControllerPrincipal()-> UIViewController{
-        let vc = SplashPruebaViewController()
-        return vc
+    @MainActor public func openViewControllerPrincipal(with navigatorController: UIViewController?){
+        navigatorController?.navigationController?.pushViewController(SplashPruebaViewController(), animated: true)
     }
 }
