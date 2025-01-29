@@ -20,14 +20,15 @@ public class SplashPruebaViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("si al viewdidload")
         let timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(SplashPruebaViewController.update), userInfo: nil, repeats: true)
     }
     
     // must be internal or public.
     @objc func update() {
+        print("si entre")
         let vc = PruebitaViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.present(vc, animated: true)
     }
 
 }
