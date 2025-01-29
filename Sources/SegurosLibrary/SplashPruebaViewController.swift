@@ -22,8 +22,7 @@ public class SplashPruebaViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         print("si al viewdidload")
-        let timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(SplashPruebaViewController.update), userInfo: nil, repeats: true)
-        timer.invalidate()
+        self.startTimer()
     }
     
     func startTimer () {
