@@ -21,7 +21,12 @@ public class SplashPruebaViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        print("si al viewdidload")
+        
+    }
+    
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("si al viewDidAppear")
         self.startTimer()
     }
     
