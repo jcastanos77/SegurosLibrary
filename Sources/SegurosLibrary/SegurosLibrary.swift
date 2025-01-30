@@ -8,7 +8,7 @@ public class SegurosLibrary{
     public init(){}
     
     @MainActor public func openViewControllerPrincipal()-> UIViewController{
-        let mainStoryboard = SplashPruebaViewController(nibName: "SplashPruebaViewController", bundle: nil)
+        let mainStoryboard = SplashPruebaViewController()
     
         return mainStoryboard
     }
