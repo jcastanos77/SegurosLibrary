@@ -8,7 +8,8 @@ public class SegurosLibrary{
     public init(){}
     
     @MainActor public func openViewControllerPrincipal()-> UIViewController{
-        let vc = SplashPruebaViewController()
-        return vc
+        let mainStoryboard: UIStoryboard = UIStoryboard(name:"SplashPruebaViewController",bundle:Bundle.main)
+        let secondViewController: SplashPruebaViewController = mainStoryboard.instantiateViewController(withIdentifier: "calculadoraSplash") as! SplashPruebaViewController
+        return secondViewController
     }
 }
