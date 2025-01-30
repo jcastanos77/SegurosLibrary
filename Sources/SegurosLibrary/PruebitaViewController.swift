@@ -15,6 +15,7 @@ class PruebitaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("si al viewDidLoad segundo")
     }
     
     @IBAction func calculateAction(_ sender: Any) {
