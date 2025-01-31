@@ -38,6 +38,8 @@ public class PrincipalView: UIViewController{
     @objc func update() {
         print("si al update")
         let vc = PruebitaViewController(nibName: "PruebitaViewController", bundle: Bundle.module)
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true)
         print("si al vc")
         timerTest?.invalidate()
