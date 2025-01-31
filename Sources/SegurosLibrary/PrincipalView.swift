@@ -1,17 +1,19 @@
 //
-//  SplashPruebaViewController.swift
+//  PrincipalView.swift
 //  SegurosLibrary
 //
-//  Created by JECASTAÑOSM on 29/01/25.
+//  Created by JECASTAÑOSM on 30/01/25.
 //
 
+import Foundation
 import UIKit
 
-open class SplashPruebaViewController: UIViewController {
-    public static let storyBoard = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SplashPruebaViewController")
-    
+public class PrincipalView: UIViewController{
+    public static let storyBoard = UIStoryboard.init(name: "PrincipalView", bundle: nil).instantiateViewController(withIdentifier: "principalView")
+   
     var timerTest : Timer?
-    open override func viewDidLoad() {
+    
+    public override func viewDidLoad() {
         super.viewDidLoad()
     }
     
@@ -27,7 +29,7 @@ open class SplashPruebaViewController: UIViewController {
       timerTest =  Timer.scheduledTimer(
           timeInterval: TimeInterval(4),
           target      : self,
-          selector    : #selector(SplashPruebaViewController.update),
+          selector    : #selector(PrincipalView.update),
           userInfo    : nil,
           repeats     : true)
     }
@@ -41,5 +43,4 @@ open class SplashPruebaViewController: UIViewController {
         timerTest?.invalidate()
         timerTest = nil
     }
-
 }
