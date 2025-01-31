@@ -19,11 +19,10 @@ public class PruebitaViewController: UIViewController {
     }
     
     @IBAction func calculateAction(_ sender: Any) {
-        var num1 = 0
-        var num2 = 0
-        if ((txFieldOne.text?.isEmpty) == nil) && ((txFieldTwo.text?.isEmpty) == nil){
-            num1 = Int(txFieldOne.text ?? "0") ?? 0
-            num2 = Int(txFieldTwo.text ?? "0") ?? 0
+        var num1 = Int(txFieldOne.text ?? "0") ?? 0
+        var num2 = Int(txFieldTwo.text ?? "0") ?? 0
+        
+        if num2 != 0 && num1 != 0{
             let total = num1 + num2
             numCalculate.text = "\(total)"
         }else{
