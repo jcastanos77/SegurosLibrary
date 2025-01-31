@@ -7,13 +7,13 @@
 
 import UIKit
 
-class PruebitaViewController: UIViewController {
+public class PruebitaViewController: UIViewController {
     @IBOutlet weak var txFieldTwo: UITextField!
     @IBOutlet weak var txFieldOne: UITextField!
     @IBOutlet weak var numCalculate: UILabel!
     @IBOutlet weak var respLabel: UILabel!
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         print("si al viewDidLoad segundo")
     }
