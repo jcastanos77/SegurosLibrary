@@ -38,7 +38,8 @@ public class PrincipalView: UIViewController{
     @objc func update() {
         print("si al update")
         let vc = PruebitaViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.present(vc, animated: true)
+        print("si al vc")
         timerTest?.invalidate()
         timerTest = nil
     }
