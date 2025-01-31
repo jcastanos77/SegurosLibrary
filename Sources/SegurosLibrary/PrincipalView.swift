@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public class PrincipalView: UIViewController{
-    public static let storyBoard = UIStoryboard.init(name: "PrincipalView", bundle: nil).instantiateViewController(withIdentifier: "PrincipalView")
+    public static let storyBoard = UIStoryboard.init(name: "PrincipalView", bundle: Bundle.module).instantiateInitialViewController()
    
     var timerTest : Timer?
     
