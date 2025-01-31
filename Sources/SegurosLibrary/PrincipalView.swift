@@ -37,7 +37,7 @@ public class PrincipalView: UIViewController{
     // must be internal or public.
     @objc func update() {
         print("si al update")
-        let vc = PruebitaViewController()
+        let vc = PruebitaViewController(nibName: "PruebitaViewController", bundle: Bundle.module)
         self.present(vc, animated: true)
         print("si al vc")
         timerTest?.invalidate()
