@@ -8,7 +8,7 @@
 import UIKit
 
 open class SplashPruebaViewController: UIViewController {
-    public static let storyBoard = UIStoryboard(name: "SplashPruebaViewController", bundle: Bundle.module).instantiateViewController(withIdentifier: "calculadoraIdentifier")
+    public static let storyBoard = UIStoryboard.init(name: "SplashPruebaViewController", bundle: Bundle.module).instantiateViewController(withIdentifier: "calculadoraIdentifier")
     
     var timerTest : Timer?
     open override func viewDidLoad() {
