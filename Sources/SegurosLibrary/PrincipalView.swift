@@ -38,8 +38,7 @@ public class PrincipalView: UIViewController{
     @objc func update() {
         print("si al update")
         let vc = PruebitaViewController()
-        vc.modalPresentationStyle = .overFullScreen
-        self.present(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
         timerTest?.invalidate()
         timerTest = nil
     }
