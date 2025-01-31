@@ -6,8 +6,4 @@ import UIKit
 
 public class SegurosLibrary{
     public init(){}
-    
-    @MainActor public func openViewControllerPrincipal()-> UIViewController{
-       
-    }
 }
