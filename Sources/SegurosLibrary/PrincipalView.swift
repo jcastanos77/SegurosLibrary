@@ -40,7 +40,10 @@ public class PrincipalView: UIViewController{
         let vc = PruebitaViewController(nibName: "PruebitaViewController", bundle: Bundle.module)
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
-        self.present(vc, animated: true)
+        //self.present(vc, animated: true)
+        
+        
+        self.navigationController?.pushViewController(vc, animated: true)
         
         timerTest?.invalidate()
         timerTest = nil
