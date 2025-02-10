@@ -18,6 +18,10 @@ public class PruebitaViewController: UIViewController {
         print("si al viewDidLoad segundo")
     }
     
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     @IBAction func calculateAction(_ sender: Any) {
         var num1 = Int(txFieldOne.text ?? "0") ?? 0
         var num2 = Int(txFieldTwo.text ?? "0") ?? 0

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,8 +28,12 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                     <items>
                         <navigationItem title="Libreria bonita" id="mJ6-x6-A3G">
-                            <barButtonItem key="backBarButtonItem" style="done" systemItem="cancel" id="lsS-Gt-hnQ">
+                            <barButtonItem key="backBarButtonItem" title="Átras" style="plain" id="lsS-Gt-hnQ">
+                                <imageReference key="image" image="arrow.backward" catalog="system" symbolScale="medium"/>
                                 <color key="tintColor" systemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="back:" destination="-1" id="sXy-QP-09R"/>
+                                </connections>
                             </barButtonItem>
                         </navigationItem>
                     </items>
@@ -100,6 +105,7 @@
         </view>
     </objects>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

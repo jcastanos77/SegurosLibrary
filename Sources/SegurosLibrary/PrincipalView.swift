@@ -19,15 +19,15 @@ public class PrincipalView: UIViewController{
     
     open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("si al viewDidAppear")
+        
         self.startTimer()
     }
     
     func startTimer () {
       guard timerTest == nil else { return }
-        print("si al timer")
+        
       timerTest =  Timer.scheduledTimer(
-          timeInterval: TimeInterval(4),
+          timeInterval: TimeInterval(2),
           target      : self,
           selector    : #selector(PrincipalView.update),
           userInfo    : nil,
@@ -36,12 +36,12 @@ public class PrincipalView: UIViewController{
     
     // must be internal or public.
     @objc func update() {
-        print("si al update")
+        
         let vc = PruebitaViewController(nibName: "PruebitaViewController", bundle: Bundle.module)
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true)
-        print("si al vc")
+        
         timerTest?.invalidate()
         timerTest = nil
     }
