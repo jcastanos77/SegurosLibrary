@@ -16,14 +16,10 @@ public class PruebitaViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 44))
-        view.addSubview(navBar)
-
-        let navItem = UINavigationItem(title: "Atras")
-        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(backButtonTapped))
-        navItem.rightBarButtonItem = doneItem
-
-        navBar.setItems([navItem], animated: false)
+        self.title = "Calculadora"
+        
+        let leftButton = UIBarButtonItem(title: "Átras", style: .plain, target: self, action: #selector(backButtonTapped))
+        self.navigationItem.leftBarButtonItem = leftButton
     }
     
     @objc func backButtonTapped() {
@@ -31,8 +27,8 @@ public class PruebitaViewController: UIViewController {
     }
     
     @IBAction func calculateAction(_ sender: Any) {
-        var num1 = Int(txFieldOne.text ?? "0") ?? 0
-        var num2 = Int(txFieldTwo.text ?? "0") ?? 0
+        let num1 = Int(txFieldOne.text ?? "0") ?? 0
+        let num2 = Int(txFieldTwo.text ?? "0") ?? 0
         
         if num2 != 0 && num1 != 0{
             let total = num1 + num2
