@@ -15,25 +15,15 @@ public class PruebitaViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let backImage = UIImage(systemName: "arrow.backward")
+
+        self.navigationController?.navigationBar.backIndicatorImage = backImage
+
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
+
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: #selector(backButtonTapped), action: nil)
     }
-    
-    public override func viewWillAppear(_ animated: Bool) {
-        let backButton = UIButton(type: .custom)
-        backButton.setImage(UIImage(systemName: "arrow.backward"), for: .normal)
-        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
-        backButton.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-            
-        var configuration = UIButton.Configuration.filled()
-        configuration.baseBackgroundColor = .clear
-        configuration.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: -20, bottom: 0, trailing: 0)
-        backButton.configuration = configuration
-            
-        let backView = UIView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
-        backView.addSubview(backButton)
-            
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backView)
-    }
-    
     
     @objc func backButtonTapped() {
         self.dismiss(animated: true)
