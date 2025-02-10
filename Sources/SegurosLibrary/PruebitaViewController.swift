@@ -7,13 +7,13 @@
 
 import UIKit
 
-public class PruebitaViewController: UIViewController {
+class PruebitaViewController: UIViewController {
     @IBOutlet weak var txFieldTwo: UITextField!
     @IBOutlet weak var txFieldOne: UITextField!
     @IBOutlet weak var numCalculate: UILabel!
     @IBOutlet weak var respLabel: UILabel!
     
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Calculadora"
