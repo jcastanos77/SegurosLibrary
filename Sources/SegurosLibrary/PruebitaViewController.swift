@@ -16,13 +16,14 @@ public class PruebitaViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backImage = UIImage(systemName: "arrow.backward")
+        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 44))
+        view.addSubview(navBar)
 
-        self.navigationController?.navigationBar.backIndicatorImage = backImage
+        let navItem = UINavigationItem(title: "Atras")
+        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(backButtonTapped))
+        navItem.rightBarButtonItem = doneItem
 
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
-
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: #selector(backButtonTapped), action: nil)
+        navBar.setItems([navItem], animated: false)
     }
     
     @objc func backButtonTapped() {
