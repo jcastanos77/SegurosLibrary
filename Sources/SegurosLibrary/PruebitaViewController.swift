@@ -16,7 +16,7 @@ class PruebitaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Calculadora"
+        self.title = "Calculadora V2"
         
         let leftButton = UIBarButtonItem(title: "Átras", style: .plain, target: self, action: #selector(backButtonTapped))
         self.navigationItem.leftBarButtonItem = leftButton
